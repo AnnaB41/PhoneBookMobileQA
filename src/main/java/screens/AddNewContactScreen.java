@@ -27,12 +27,19 @@ public class AddNewContactScreen extends BaseScreen{
        MobileElement btnCreate;
 
     public ContactListScreen fillTheForm(ContactModel contact) {
+        waitForAnElement(btnCreate);
         inputName.sendKeys(contact.getName());
+        driver.hideKeyboard(); // это скрытие клавиатуры
         inputLastname.sendKeys(contact.getLastName());
+        driver.hideKeyboard(); // это скрытие клавиатуры
         inputEmail.sendKeys(contact.getEmail());
+        driver.hideKeyboard(); // это скрытие клавиатуры
         inputPhone.sendKeys(contact.getPhone());
+        driver.hideKeyboard(); // это скрытие клавиатуры
         inputAddress.sendKeys(contact.getAddress());
+        driver.hideKeyboard();
         inputDescription.sendKeys(contact.getDescription());
+        driver.hideKeyboard();
         btnCreate.click();
         return new ContactListScreen(driver);
     }

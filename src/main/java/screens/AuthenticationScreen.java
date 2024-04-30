@@ -12,7 +12,7 @@ public class AuthenticationScreen extends BaseScreen {
         super(driver);
     }
 
-    @FindBy(xpath = "//*[@resource-id='com.sheygam.contactapp:id/action_bar']/android.widget.TextView")
+    @FindBy(xpath = "//*[@resource-id='com.sheygam.contactapp:id/action_bar']/android.widget.TextView") // проваливаемся внуть тега
     MobileElement titleText;
     @FindBy(id = "com.sheygam.contactapp:id/inputEmail")
     MobileElement inputEmailField;
@@ -44,6 +44,17 @@ public class AuthenticationScreen extends BaseScreen {
             return (T)new AuthenticationScreen(driver);
         }
         return (T)new ContactListScreen(driver);
+
+        /*
+        try{
+    WebElement element = driver.findElement(By.id("android:id/alertTitle"));
+    return  (T)new AuthenticationScreen(driver);
+} catch (Exception e){
+    e.printStackTrace();
+    return (T) new ContactListScreen(driver);
+}
+
+         */
     }
     public boolean isItAuthenticationScreen(){
         return titleText.isDisplayed();
