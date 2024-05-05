@@ -1,6 +1,6 @@
 package models;
 
-public class ContactModel {
+public class Contact {
 
     private String id;
     private String name;
@@ -10,41 +10,41 @@ public class ContactModel {
     private String address;
     private String description;
 
-    public ContactModel() {
+    public Contact() {
 
     }
 
-    public ContactModel id (String id) {
+    public Contact id (String id) {
         this.id = id;
         return this;
     }
-    public ContactModel name (String name) {
+    public Contact name (String name) {
         this.name = name;
         return this;
     }
-    public ContactModel lastName (String lastName) {
+    public Contact lastName (String lastName) {
         this.lastName = lastName;
         return this;
     }
-    public ContactModel email(String email) {
+    public Contact email(String email) {
         this.email = email;
         return this;
     }
-    public ContactModel phone(String phone) {
+    public Contact phone(String phone) {
         this.phone = phone;
         return this;
     }
-    public ContactModel address (String address) {
+    public Contact address (String address) {
         this.address = address;
         return this;
     }
-    public ContactModel description(String description) {
+    public Contact description(String description) {
         this.id = id;
         return this;
     }
 
 
-    public ContactModel(String name, String lastName, String email, String phone, String address, String description) {
+    public Contact(String name, String lastName, String email, String phone, String address, String description) {
       //  this.id = id;
         this.name = name;
         this.lastName = lastName;

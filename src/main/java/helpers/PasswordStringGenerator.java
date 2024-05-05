@@ -34,4 +34,9 @@ public class PasswordStringGenerator { public static String generateString() {
     }
 
     return stringBuilder.toString();
-}}
+}
+
+    }
+
+
+

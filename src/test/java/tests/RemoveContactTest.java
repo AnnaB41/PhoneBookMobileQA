@@ -5,9 +5,8 @@ import helpers.AddressGenerator;
 import helpers.EmailGenerator;
 import helpers.NameAndLastNameGenerator;
 import helpers.PhoneNumberGenerator;
-import models.ContactModel;
+import models.Contact;
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import screens.ContactListScreen;
 import screens.SplashScreen;
@@ -29,7 +28,7 @@ public class RemoveContactTest extends AppiumConfig {
                 .fillEmailField("myemail5@mail.com")
                 .fillPasswordField("Tt123456$")
                 .clickByLoginButton();
-        ContactModel contact = new ContactModel(
+        Contact contact = new Contact(
                 NameAndLastNameGenerator.generateName(),
                 NameAndLastNameGenerator.generateLastName(),
                 EmailGenerator.generateEmail(5,3,2),

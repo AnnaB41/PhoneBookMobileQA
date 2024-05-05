@@ -2,7 +2,7 @@ package screens;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
-import models.ContactModel;
+import models.Contact;
 import org.openqa.selenium.support.FindBy;
 
 public class AddNewContactScreen extends BaseScreen{
@@ -26,7 +26,7 @@ public class AddNewContactScreen extends BaseScreen{
        @FindBy(xpath = "//*[@resource-id='com.sheygam.contactapp:id/createBtn']")
        MobileElement btnCreate;
 
-    public ContactListScreen fillTheForm(ContactModel contact) {
+    public ContactListScreen fillTheForm(Contact contact) {
         waitForAnElement(btnCreate);
         inputName.sendKeys(contact.getName());
         driver.hideKeyboard(); // это скрытие клавиатуры
